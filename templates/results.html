@@ -8,14 +8,12 @@
 </head>
 <body>
     <h1>Search Results</h1>
-    
-    <p>You searched for {{ searched_for }}</p>
-    
+    <p>You searched for {{ searched_for }}.</p>
+
     <ul>
-        {% for item in headlines %}
-        <li>{{ item }}</li>
-        {% endfor%}
+        {% for tweet in the_tweets %}
+        <li><a href="https://twitter.com/statuses/{{ tweet.id }}">{{ tweet.text }}</a></li>
+        {% endfor %}
     </ul>
-    <!--<a href="search">Search again</a>-->
 </body>
 </html>
